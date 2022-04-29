@@ -10,11 +10,14 @@ const callBack = (number) => {
       console.log("FizzBuzz", number)
    else if(number % 5 === 0)
       console.log("Buzz", number)
+   else if(number % 3 === 0)
+      console.log("Fizz", number)
 }
 
 // Add Event Listeners
 eventEmitter.addListener('FizzBuzz', callBack);
 
 // Fire event
+eventEmitter.emit('FizzBuzz', 3);
 eventEmitter.emit('FizzBuzz', 5);
 eventEmitter.emit('FizzBuzz', 15);
