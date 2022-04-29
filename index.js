@@ -6,8 +6,10 @@ const events = require('events');
 const eventEmitter = new events.EventEmitter();
 
 const callBack = (number) => {
-   if(number % 5 === 0)
-      console.log("Buzz")
+   if(number % 5 === 0 && number % 3 === 0)
+      console.log("FizzBuzz", number)
+   else if(number % 5 === 0)
+      console.log("Buzz", number)
 }
 
 // Add Event Listeners
@@ -15,3 +17,4 @@ eventEmitter.addListener('FizzBuzz', callBack);
 
 // Fire event
 eventEmitter.emit('FizzBuzz', 5);
+eventEmitter.emit('FizzBuzz', 15);
