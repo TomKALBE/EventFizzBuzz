@@ -12,6 +12,8 @@ const callBack = (number) => {
       console.log("Buzz", number)
    else if(number % 3 === 0)
       console.log("Fizz", number)
+   else
+      console.log("Your number doesnt match")
 }
 
 // Add Event Listeners
@@ -21,3 +23,4 @@ eventEmitter.addListener('FizzBuzz', callBack);
 eventEmitter.emit('FizzBuzz', 3);
 eventEmitter.emit('FizzBuzz', 5);
 eventEmitter.emit('FizzBuzz', 15);
+eventEmitter.emit('FizzBuzz', 1);
